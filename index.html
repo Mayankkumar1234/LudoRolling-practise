@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll Dice</title>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(146, 176, 233);
+}
+.main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.inner-content{
+  height: 75%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-image: linear-gradient(to bottom right, rgb(45, 157, 165),pink,teal);
+  
+}
+.inner-content>span{
+  width: 90%;
+  padding: 1px;
+  background-color: rgb(150, 121, 121);
+}
+.dices{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.dices>.dice-1,.dice-2,.dice-3{
+height: 220px;
+}
+#score{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40PX;
+}
+#roll-btn{
+  background-color: rgb(196, 120, 20);
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  color: aliceblue;
+  
+}
+.animation{
+  animation: rotateA1 2s;
+}
+@keyframes rotateA1 {
+0%{transform: rotate(0deg);}
+100%{transform: rotate(360deg);}
+50%{opacity: 0.5;}
+100%{opacity: 0;}
+}
+  </style>
+</head>
+<body>
+  
+  <div class="main">
+    <div class="inner-content">
+    
+    <h1> <span id="result"></span>Win the Match</h1>
+    <span></span>
+    <div class="dices">
+      <img src="imgs/dice-1.png" alt="" class="dice-1">
+      <img src="imgs/dice-1.png" alt="" class="dice-2">
+      <img src="imgs/dice-1.png" alt="" class="dice-3">
+    </div>
+    <div id="score">
+      <p>Score A:<span id="ScoreA"></span></p>
+      <p>Score B: <span id="ScoreB"></span></p>
+      <p>Score C:<span id="ScoreC"></span></p>
+    </div>
+    <div class="btn">
+      <button id="roll-btn">Roll</button>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
+
+<script src="script.js">
+
+
+</script>
